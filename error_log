@@ -1,0 +1,4 @@
+[25-Feb-2025 16:15:58 America/Sao_Paulo] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Email inválido in /home/digitalm/luzdaluasemijoias.com.br/enviar.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/digitalm/luzdaluasemijoias.com.br/enviar.php on line 29

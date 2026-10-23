@@ -1,0 +1,47 @@
+.revendedora {
+    padding: 60px 10px;
+}
+
+.revendedora-grid {
+    display: grid;
+    justify-items: center;
+    gap: 40px;
+}
+
+.title {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+    @include font(40, 400, 1.2em);
+}
+
+.revendedora-content {
+    @include flex(center, center, 15px);
+    flex-wrap: wrap;
+}
+
+.diff {
+    max-width: 285px;
+
+    img {
+        border-radius: 100% 100% 0 0;
+    }
+
+    .diff-text {
+        h2 {
+            @include font(25, 400);
+        }
+
+        @include font(18, 300);
+
+        background-color: var(--sec);
+        padding: 10px;
+        height: 188px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+}

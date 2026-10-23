@@ -1,0 +1,33 @@
+.colecao {
+    padding: 70px 10px;
+    background: url(/img/colecao-bg.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.colecao-grid {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+
+    h3 {
+        text-align: center;
+        @include font(40, 400, 1.2em);
+
+        @media only screen and (max-width:530px) {
+            @include font(22, 400, 1.2em);
+        }
+    }
+}
+
+.colecao-content {
+    @include flex(center, center, 15px);
+
+    div {
+        @include flex(space-between, center, 15px);
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width:530px) {
+        flex-direction: column;
+    }
+}

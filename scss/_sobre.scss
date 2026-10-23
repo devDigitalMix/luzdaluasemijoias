@@ -1,0 +1,47 @@
+.sobre {
+    padding: 70px 10px;
+    background: url(/img/sobre-bg.webp) no-repeat center center;
+    background-size: cover;
+    color: var(--light);
+}
+
+.sobre-grid {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+.sobre-title {
+    @include flex(center, center, 15px);
+    text-align: center;
+    @include font(40, 400, 1.2em);
+
+    @media only screen and (max-width: 570px) {
+        @include font(30, 400, 1.2em);
+
+        img {
+            max-width: 40px;
+        }
+    }
+}
+
+.sobre-content {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+
+    p {
+        border: 1px solid var(--light);
+        background-color: #4E4944;
+        max-width: 1065px;
+        width: 100%;
+        text-align: center;
+        @include flex(center, center, 0);
+        @include font(30, 400);
+        padding: 10px;
+
+        @media only screen and (max-width: 570px) {
+            @include font(20, 400);
+        }
+    }
+}

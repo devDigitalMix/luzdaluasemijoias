@@ -1,0 +1,30 @@
+.header {
+  padding: 50px 10px;
+}
+
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sec);
+  padding: 10px 40px;
+  border-radius: 40px
+}
+
+.redes {
+  @include flex(center, center, 10px);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  a {
+    @include font(18, 400);
+
+    &:hover {
+      color: var(--main);
+    }
+  }
+}

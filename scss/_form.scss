@@ -1,0 +1,81 @@
+.form {
+    position: relative;
+    padding: 50px 10px;
+    background: url(/img/bg-form.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.form-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.form-title {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    color: var(--light);
+    text-align: center;
+
+    h3 {
+        @include font(40, 400, 1.1em);
+    }
+
+    @include font(25, 400);
+
+    @media only screen and (max-width:600px) {
+        h3 {
+            @include font(30, 400, 1.1em);
+        }
+
+        @include font(18, 400);
+    }
+}
+
+.formphp {
+    display: grid;
+    gap: 20px;
+
+    div {
+        @include flex(center, center, 15px);
+
+        @media only screen and (max-width:700px) {
+            flex-direction: column;
+        }
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+input,
+select,
+textarea {
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid var(--light);
+    background-color: #4E4944;
+    padding: 25px;
+    color: var(--light);
+    @include font(25, 300);
+    min-width: 230px;
+    width: 100%;
+
+    &::placeholder {
+        color: var(--light);
+        font-style: italic;
+        @include font(25, 300, 1.2em);
+    }
+
+    @media only screen and (max-width:700px) {
+        padding: 10px;
+        @include font(18, 300);
+
+        &::placeholder {
+            color: var(--light);
+            @include font(18, 300);
+        }
+    }
+}

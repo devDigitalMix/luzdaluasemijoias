@@ -1,0 +1,49 @@
+.footer {
+    padding: 50px 10px;
+    background: url(/img/footer-bg.webp) no-repeat center center;
+    background-size: cover;
+    color: var(--light)
+}
+
+.footer-grid {
+    @include flex(center, center, 40px);
+    flex-wrap: wrap;
+}
+
+.footer-img {
+    img {
+        border-radius: 130px 130px 0 0;
+    }
+}
+
+.footer-content {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+
+    a {
+        @include flex(center, center, 10px);
+        @include font(36, 300);
+
+        span {
+            @include font(20, 300);
+        }
+
+        &:hover {
+            color: var(--main);
+        }
+
+        &:not(:first-child) {
+            @media only screen and (max-width:405px) {
+                img {
+                    max-width: 30px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:405px) {
+            @include font(25, 300);
+        }
+    }
+}

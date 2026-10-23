@@ -1,0 +1,148 @@
+:root {
+  --main: #81705B;
+  --light: #EEEEEE;
+  --sec: #D5C9BB;
+  --dark: #16120E;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whats-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  animation: move 3s infinite;
+  z-index: 222;
+  max-width: 65px;
+}
+
+@keyframes move {
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+html {
+  font-size: 16px;
+  font-family: "transat-text", sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+a,
+svg path,
+button {
+  transition: 0.3s;
+}
+
+.guarda {
+  position: relative;
+  overflow: hidden;
+}
+
+#form-top {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.guarda video {
+  position: absolute;
+  width: 100vw;
+  height: 1000px;
+  z-index: -1;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.btn {
+  position: relative;
+  max-width: 393px;
+  width: 100%;
+  padding: 10px 30px;
+  text-align: center;
+  background: var(--light);
+  color: var(--dark);
+  @include font(25, 400);
+  box-shadow: 0 0 0 1px var(--dark);
+
+  &:hover {
+    box-shadow: none;
+
+    .top {
+      width: 100%;
+    }
+
+    .bottom {
+      width: 100%;
+    }
+
+    .left {
+      height: 100%;
+    }
+
+    .right {
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width:390px) {
+    @include font(20, 400);
+  }
+}
+
+.btn span {
+  transition: 0.3s;
+  display: block;
+  background-color: var(--dark);
+  box-shadow: 3px 3px 0 var(--dark);
+  position: absolute;
+}
+
+.top,
+.bottom {
+  width: 0%;
+  height: 1px;
+}
+
+.top {
+  top: 0;
+  left: 0;
+}
+
+.bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.left,
+.right {
+  height: 0%;
+  width: 1px;
+}
+
+.left {
+  left: 0;
+  bottom: 0;
+}
+
+.right {
+  top: 0;
+  right: 0;
+}

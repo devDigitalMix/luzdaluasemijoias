@@ -1,0 +1,16 @@
+.videos {
+    padding: 50px 10px;
+    background: url(/img/bg-videos.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.videos-grid {
+    @include flex(center, center, 40px);
+    flex-wrap: wrap;
+
+    video {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 2px;
+    }
+}
